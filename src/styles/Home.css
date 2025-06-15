@@ -1,0 +1,396 @@
+/* General Layout */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f9fa;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* PROFILE ICON */
+.profile-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-left: 15px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.profile-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Navbar */
+.navbar {
+  background-color: #0077b6;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.logo {
+  margin-right: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Search Bar */
+.search-bar {
+  position:sticky;
+  display: flex;
+  gap: 1rem;
+  top: 10px; /* adjust based on your navbar height */
+  z-index: 999;
+  padding: 1rem 2rem;
+  background-color: #e3f2fd;
+  justify-content: center;
+  width: 35%;            /* Reduce width */
+  max-width: 900px;      /* Optional: limit max width */
+  margin: 0 auto;        /* Center the bar */
+  border-radius: 10px;   /* Optional: rounded corners */
+}
+
+
+
+
+.search-bar input,
+.search-bar button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.search-bar button {
+  background-color: #00b4d8;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #0096c7;
+}
+
+/* Main Section */
+.main-section {
+  display: flex;
+  flex: 1;
+  padding: 2rem;
+}
+
+/* Left Sidebar */
+.left-sidebar {
+  width: 25%;
+  padding-right: 2rem;
+}
+
+.map-placeholder {
+  background-color: #dbeafe;
+  padding: 1rem;
+  border: 1px dashed #0077b6;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.left-sidebar select,
+.left-sidebar input[type='range'] {
+  width: 100%;
+  margin: 0.5rem 0 1rem;
+  padding: 0.4rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.price-filter label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+
+/* BnB Listings */
+.bnb-list {
+  width: 75%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.bnb-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: calc(50% - 1rem);
+  transition: transform 0.3s;
+}
+
+.bnb-card:hover {
+  transform: translateY(-5px);
+}
+
+.bnb-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-info {
+  padding: 1rem;
+}
+
+.card-info h3 {
+  margin: 0.3rem 0;
+  color: #0077b6;
+}
+
+.location-label {
+  font-weight: bold;
+  color: #555;
+}
+
+/* Footer */
+.footer {
+  background-color: #caf0f8;
+  padding: 1rem;
+  text-align: left;
+  margin-top: auto;
+  color: #333;
+  font-weight: 500;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+  margin-top: auto;
+}
+
+.footer .socials {
+  text-align: right;
+  font-size: 14px;
+  margin-top: auto;
+}
+
+.sample-states-container {
+  padding: 2rem;
+  background-color: #f9fafb;
+}
+
+.state-section {
+  margin-bottom: 3rem;
+}
+
+.state-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #0077b6;
+  border-bottom: 2px solid #ccc;
+  display: inline-block;
+}
+
+.bnb-row {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.bnb-card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.bnb-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.bnb-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.bnb-info {
+  padding: 1rem;
+}
+
+.bnb-info h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.bnb-info p {
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.logo-img {
+  height: 80px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.logo-combo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-text {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.footer-link {
+  margin: 0 5px;
+  text-decoration: none;
+  color: #333;
+}
+
+.footer-icon {
+  font-size: 20px;
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-icon:hover {
+  color: #e1306c;
+  /* Instagram color */
+}
+
+/* footer items*/
+.site-footer {
+  background-color: #f7f7f7;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-sections {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-column {
+  flex: 1 1 250px;
+  margin: 10px;
+}
+
+.footer-column h4 {
+  margin-bottom: 12px;
+  color: #333;
+  font-size: 16px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #666;
+  font-size: 14px;
+}
+
+.footer-column ul li a:hover {
+  color: #000;
+}
+
+.getaway-section {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.getaway-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.getaway-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.getaway-item {
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.getaway-item:hover {
+  transform: translateY(-5px);
+}
+
+.getaway-item h4 {
+  margin: 0 0 5px;
+  font-size: 16px;
+  color: #222;
+}
+
+.getaway-item p {
+  margin: 0;
+  color: #555;
+}
+/* check in*/
+/* In your CSS file */
+.date-input-wrapper {
+  position: relative;
+}
+
+.date-placeholder {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #888;
+}
+
+.date-input-wrapper input:focus + .date-placeholder,
+.date-input-wrapper input:not(:placeholder-shown) + .date-placeholder {
+  display: none;
+}
